@@ -5,6 +5,8 @@ import { NetworkBackground } from "@/components/network-background"
 import { WebsiteMattersSection } from "@/components/sections/website-matters-section"
 import { ProcessSection } from "@/components/sections/process-section"
 import { ServicesSection } from "@/components/sections/services-section"
+import { AboutSection } from "@/components/sections/about-section"
+import { FaqSection } from "@/components/sections/faq-section"
 import { ContactSection } from "@/components/sections/contact-section"
 
 export default function Page() {
@@ -31,6 +33,8 @@ export default function Page() {
         <WebsiteMattersSection />
         <ProcessSection />
         <ServicesSection />
+        <AboutSection />
+        <FaqSection />
         <ContactSection />
 
         <BackToTop />
