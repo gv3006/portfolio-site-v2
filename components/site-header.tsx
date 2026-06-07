@@ -7,6 +7,8 @@ const links = [
   { id: "why-it-matters", label: "WHY IT MATTERS" },
   { id: "process", label: "PROCESS" },
   { id: "services", label: "SERVICES" },
+  { id: "about", label: "ABOUT" },
+  { id: "faq", label: "FAQ" },
   { id: "contact", label: "GET IN TOUCH" },
 ]
 

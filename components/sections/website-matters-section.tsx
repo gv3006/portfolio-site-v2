@@ -119,8 +119,8 @@ export function WebsiteMattersSection() {
       <Reveal>
         <SectionHeading
           eyebrow="Evidence-Based Digital Presence"
-          title="Why Physician Websites Matter"
-          description="Physician websites influence private practice through four key mechanisms: patient acquisition, first impressions and patient decisions, reputation management, and practice differentiation in an increasingly competitive digital marketplace."
+          title="Why Your Website Matters"
+          description="Websites influence private practice through four key mechanisms: patient acquisition, first impressions and patient decisions, reputation management, and practice differentiation in an increasingly competitive digital marketplace."
         />
       </Reveal>
 
