@@ -57,17 +57,17 @@ export function FaqSection() {
       </Reveal>
 
       <Reveal delay={120} rootMargin="0px 0px 15% 0px" threshold={0}>
-        <div className="mt-16 overflow-hidden rounded-3xl border border-white/10 bg-black/80">
-          <Accordion type="single" collapsible className="divide-y divide-white/10">
+        <div className="mt-16 overflow-hidden rounded-3xl border border-border bg-card">
+          <Accordion type="single" collapsible className="divide-y divide-border">
             {faqs.map((faq, index) => (
               <AccordionItem key={faq.question} value={`faq-${index + 1}`} className="border-b-0">
-                <AccordionTrigger className="px-6 py-6 text-left hover:bg-white/[0.03] hover:no-underline focus-visible:ring-white/30 md:px-8 [&>svg]:text-white/40">
-                  <span className="font-mono text-sm uppercase tracking-[0.18em] text-white md:text-base">
+                <AccordionTrigger className="px-6 py-6 text-left hover:bg-foreground/[0.03] hover:no-underline focus-visible:ring-foreground/30 md:px-8 [&>svg]:text-foreground/40">
+                  <span className="font-mono text-sm uppercase tracking-[0.18em] text-foreground md:text-base">
                     {faq.question}
                   </span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-6 md:px-8">
-                  <p className="max-w-3xl text-pretty text-sm leading-relaxed text-white/55 md:text-base">
+                  <p className="max-w-3xl text-pretty text-sm leading-relaxed text-foreground/55 md:text-base">
                     {faq.answer}
                   </p>
                 </AccordionContent>

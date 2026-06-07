@@ -47,7 +47,7 @@ export function SiteHeader() {
       <nav className="flex items-center gap-8 text-sm font-mono tracking-wider">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="text-white hover:text-white/60 transition-colors font-semibold"
+          className="text-foreground hover:text-foreground/60 transition-colors font-semibold"
         >
           STUDIO PIXEL®
         </button>
@@ -57,7 +57,7 @@ export function SiteHeader() {
             onClick={() => scrollToId(link.id)}
             className={cn(
               "transition-colors",
-              active === link.id ? "text-white" : "text-white/60 hover:text-white",
+              active === link.id ? "text-foreground" : "text-foreground/60 hover:text-foreground",
             )}
           >
             {link.label}
@@ -69,10 +69,10 @@ export function SiteHeader() {
           className="w-8 h-8 flex items-center justify-center hover:opacity-60 transition-opacity"
         >
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="8" height="8" fill="white" />
-            <rect x="12" width="8" height="8" fill="white" />
-            <rect y="12" width="8" height="8" fill="white" />
-            <rect x="12" y="12" width="8" height="8" fill="white" />
+            <rect width="8" height="8" fill="currentColor" />
+            <rect x="12" width="8" height="8" fill="currentColor" />
+            <rect y="12" width="8" height="8" fill="currentColor" />
+            <rect x="12" y="12" width="8" height="8" fill="currentColor" />
           </svg>
         </button>
       </nav>

@@ -6,7 +6,7 @@ function Cite({ children }: { children: string }) {
   return (
     <span
       aria-label={`Reference ${children}`}
-      className="mx-1 inline-flex translate-y-[-0.12em] items-center rounded-full border border-white/15 bg-white/[0.08] px-2 py-0.5 font-mono text-[0.6rem] leading-none text-white/55 transition-colors duration-200 hover:border-white/25 hover:bg-white/[0.13] hover:text-white/75"
+      className="mx-1 inline-flex translate-y-[-0.12em] items-center rounded-full border border-border bg-foreground/[0.06] px-2 py-0.5 font-mono text-[0.6rem] leading-none text-foreground/55 transition-colors duration-200 hover:border-foreground/25 hover:bg-foreground/[0.1] hover:text-foreground/75"
     >
       {children}
     </span>
@@ -133,19 +133,19 @@ export function WebsiteMattersSection() {
             rootMargin="0px 0px 15% 0px"
             threshold={0}
           >
-            <article className="group relative h-full overflow-hidden rounded-3xl border border-white/10 bg-black p-10 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/20 hover:bg-neutral-900/90 focus-within:border-white/20 focus-within:bg-neutral-900/90">
+            <article className="group relative h-full overflow-hidden rounded-3xl border border-border bg-card p-10 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-foreground/20 hover:bg-secondary focus-within:border-foreground/20 focus-within:bg-secondary">
               <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(255,255,255,0.10),transparent_34%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(0,0,0,0.06),transparent_34%)]" />
               </div>
 
               <div className="relative z-10">
-                <span className="font-mono text-xs tracking-[0.35em] text-white/30">{reason.number}</span>
+                <span className="font-mono text-xs tracking-[0.35em] text-foreground/30">{reason.number}</span>
 
-                <h3 className="mt-6 text-balance font-mono text-xl uppercase tracking-[0.18em] text-white">
+                <h3 className="mt-6 text-balance font-mono text-xl uppercase tracking-[0.18em] text-foreground">
                   {reason.title}
                 </h3>
 
-                <p className="mt-4 text-pretty text-sm leading-relaxed text-white/50">{reason.description}</p>
+                <p className="mt-4 text-pretty text-sm leading-relaxed text-foreground/50">{reason.description}</p>
               </div>
             </article>
           </Reveal>
@@ -153,23 +153,23 @@ export function WebsiteMattersSection() {
       </div>
 
       <Reveal delay={320} rootMargin="0px 0px 15% 0px" threshold={0}>
-        <div className="mt-10 overflow-hidden rounded-3xl border border-white/10 bg-black/80">
+        <div className="mt-10 overflow-hidden rounded-3xl border border-border bg-card">
           <Accordion type="single" collapsible>
             <AccordionItem value="references" className="border-b-0">
-              <AccordionTrigger className="px-6 py-5 hover:bg-white/[0.03] hover:no-underline focus-visible:ring-white/30 md:px-8 [&>svg]:text-white/40">
-                <span className="font-mono text-xs uppercase tracking-[0.35em] text-white/35">References</span>
+              <AccordionTrigger className="px-6 py-5 hover:bg-foreground/[0.03] hover:no-underline focus-visible:ring-foreground/30 md:px-8 [&>svg]:text-foreground/40">
+                <span className="font-mono text-xs uppercase tracking-[0.35em] text-foreground/35">References</span>
               </AccordionTrigger>
 
               <AccordionContent className="pb-0">
-                <div className="divide-y divide-white/10 border-t border-white/10">
+                <div className="divide-y divide-border border-t border-border">
                   {references.map((reference) => (
                     <article key={reference.number} id={`ref-${reference.number}`} className="px-6 py-5 md:px-8">
                       <div className="grid gap-3 text-left md:grid-cols-[3rem_1fr]">
-                        <span className="font-mono text-xs tracking-[0.25em] text-white/30">
+                        <span className="font-mono text-xs tracking-[0.25em] text-foreground/30">
                           [{reference.number}]
                         </span>
 
-                        <p className="text-xs leading-relaxed text-white/45 md:text-sm">{reference.title}</p>
+                        <p className="text-xs leading-relaxed text-foreground/45 md:text-sm">{reference.title}</p>
                       </div>
                     </article>
                   ))}

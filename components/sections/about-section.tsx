@@ -22,15 +22,15 @@ export function AboutSection() {
         </Reveal>
 
         <div className="lg:col-span-7">
-          <div className="space-y-6 border-l border-white/10 pl-6 md:pl-10">
+          <div className="space-y-6 border-l border-border pl-6 md:pl-10">
             {paragraphs.map((paragraph, index) => (
               <Reveal key={paragraph} delay={index * 70} rootMargin="0px 0px 15% 0px" threshold={0}>
-                <p className="text-pretty text-base leading-relaxed text-white/60 md:text-lg">{paragraph}</p>
+                <p className="text-pretty text-base leading-relaxed text-foreground/60 md:text-lg">{paragraph}</p>
               </Reveal>
             ))}
 
             <Reveal delay={paragraphs.length * 70} rootMargin="0px 0px 15% 0px" threshold={0}>
-              <p className="pt-4 font-mono text-sm uppercase leading-relaxed tracking-[0.24em] text-white">
+              <p className="pt-4 font-mono text-sm uppercase leading-relaxed tracking-[0.24em] text-foreground">
                 -George Verdelis
               </p>
             </Reveal>

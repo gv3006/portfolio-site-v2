@@ -11,7 +11,7 @@ import { ContactSection } from "@/components/sections/contact-section"
 
 export default function Page() {
   return (
-    <div className="grain-background min-h-screen bg-black text-white">
+    <div className="grain-background min-h-screen bg-background text-foreground">
       <NetworkBackground />
       <div className="grain-content">
         <SiteHeader />
@@ -22,7 +22,7 @@ export default function Page() {
             <h1 className="font-mono text-3xl md:text-5xl font-semibold leading-tight tracking-tight text-balance">
               Your website should reflect the quality of your care
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl font-mono text-sm md:text-base leading-relaxed tracking-wide text-white/60 text-pretty">
+            <p className="mx-auto mt-6 max-w-2xl font-mono text-sm md:text-base leading-relaxed tracking-wide text-foreground/60 text-pretty">
               Explore modern website options built to help patients trust your practice and take the next step
             </p>
           </div>

@@ -27,7 +27,7 @@ export function ContactSection() {
         <Reveal delay={80}>
           <form onSubmit={handleSubmit} className="space-y-6 max-w-xl">
             <div className="space-y-2">
-              <label htmlFor="name" className="block font-mono text-xs tracking-widest uppercase text-white/40">
+              <label htmlFor="name" className="block font-mono text-xs tracking-widest uppercase text-foreground/40">
                 Name
               </label>
               <input
@@ -36,11 +36,11 @@ export function ContactSection() {
                 type="text"
                 required
                 placeholder="Your name"
-                className="w-full bg-transparent border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-white/40 transition-colors"
+                className="w-full bg-transparent border border-border rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-foreground/40 transition-colors"
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="email" className="block font-mono text-xs tracking-widest uppercase text-white/40">
+              <label htmlFor="email" className="block font-mono text-xs tracking-widest uppercase text-foreground/40">
                 Email
               </label>
               <input
@@ -49,11 +49,11 @@ export function ContactSection() {
                 type="email"
                 required
                 placeholder="you@example.com"
-                className="w-full bg-transparent border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-white/40 transition-colors"
+                className="w-full bg-transparent border border-border rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-foreground/40 transition-colors"
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="message" className="block font-mono text-xs tracking-widest uppercase text-white/40">
+              <label htmlFor="message" className="block font-mono text-xs tracking-widest uppercase text-foreground/40">
                 Message
               </label>
               <textarea
@@ -62,17 +62,17 @@ export function ContactSection() {
                 rows={5}
                 required
                 placeholder="Tell us about your project..."
-                className="w-full bg-transparent border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-white/40 transition-colors resize-none"
+                className="w-full bg-transparent border border-border rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-foreground/40 transition-colors resize-none"
               />
             </div>
             <button
               type="submit"
-              className="font-mono text-xs tracking-widest uppercase bg-white text-black rounded-full px-8 py-3 hover:bg-white/80 transition-colors"
+              className="font-mono text-xs tracking-widest uppercase bg-primary text-primary-foreground rounded-full px-8 py-3 hover:bg-primary/90 transition-colors"
             >
               Send Message
             </button>
             {submitted ? (
-              <p className="font-mono text-xs tracking-widest uppercase text-white/60" role="status">
+              <p className="font-mono text-xs tracking-widest uppercase text-foreground/60" role="status">
                 Thanks - this is a placeholder, no message was sent.
               </p>
             ) : null}
@@ -82,12 +82,12 @@ export function ContactSection() {
         <Reveal delay={160}>
           <div className="space-y-8 font-mono text-sm">
             <div>
-              <p className="text-xs tracking-widest uppercase text-white/40">Email</p>
-              <p className="mt-2 text-white/70">hello@studiopixel.example</p>
+              <p className="text-xs tracking-widest uppercase text-foreground/40">Email</p>
+              <p className="mt-2 text-foreground/70">hello@studiopixel.example</p>
             </div>
             <div>
-              <p className="text-xs tracking-widest uppercase text-white/40">Studio</p>
-              <p className="mt-2 text-white/70 leading-relaxed">
+              <p className="text-xs tracking-widest uppercase text-foreground/40">Studio</p>
+              <p className="mt-2 text-foreground/70 leading-relaxed">
                 123 Placeholder Ave
                 <br />
                 Suite 000
@@ -96,11 +96,11 @@ export function ContactSection() {
               </p>
             </div>
             <div>
-              <p className="text-xs tracking-widest uppercase text-white/40">Social</p>
-              <div className="mt-2 flex gap-4 text-white/70">
-                <span className="hover:text-white transition-colors cursor-pointer">Instagram</span>
-                <span className="hover:text-white transition-colors cursor-pointer">Behance</span>
-                <span className="hover:text-white transition-colors cursor-pointer">LinkedIn</span>
+              <p className="text-xs tracking-widest uppercase text-foreground/40">Social</p>
+              <div className="mt-2 flex gap-4 text-foreground/70">
+                <span className="hover:text-foreground transition-colors cursor-pointer">Instagram</span>
+                <span className="hover:text-foreground transition-colors cursor-pointer">Behance</span>
+                <span className="hover:text-foreground transition-colors cursor-pointer">LinkedIn</span>
               </div>
             </div>
           </div>

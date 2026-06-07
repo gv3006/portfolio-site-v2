@@ -112,7 +112,7 @@ export function NetworkBackground() {
           const hoverBoost = mouseDistance < MOUSE_DISTANCE ? 1 - mouseDistance / MOUSE_DISTANCE : 0
           const alpha = (1 - distance / MAX_DISTANCE) * (0.06 + hoverBoost * 0.22)
 
-          context.strokeStyle = `rgba(255, 255, 255, ${alpha})`
+          context.strokeStyle = `rgba(20, 20, 20, ${alpha})`
           context.lineWidth = 1
           context.beginPath()
           context.moveTo(a.x, a.y)
@@ -127,7 +127,7 @@ export function NetworkBackground() {
           if (distance > MOUSE_DISTANCE) continue
 
           const strength = 1 - distance / MOUSE_DISTANCE
-          context.strokeStyle = `rgba(255, 255, 255, ${0.08 + strength * 0.16})`
+          context.strokeStyle = `rgba(20, 20, 20, ${0.08 + strength * 0.16})`
           context.lineWidth = 1 + strength * 0.6
           context.beginPath()
           context.moveTo(mouse.x, mouse.y)
@@ -142,14 +142,14 @@ export function NetworkBackground() {
         const pulse = reducedMotion ? 1 : Math.sin(time * 0.001 + node.phase) * 0.25 + 0.75
         const radius = 1.2 + hoverBoost * 1.9
 
-        context.fillStyle = `rgba(255, 255, 255, ${(0.12 + hoverBoost * 0.21) * pulse})`
+        context.fillStyle = `rgba(20, 20, 20, ${(0.12 + hoverBoost * 0.21) * pulse})`
         context.beginPath()
         context.arc(node.x, node.y, radius, 0, Math.PI * 2)
         context.fill()
       }
 
       if (mouse.active) {
-        context.fillStyle = "rgba(255, 255, 255, 0.58)"
+        context.fillStyle = "rgba(20, 20, 20, 0.55)"
         context.beginPath()
         context.arc(mouse.x, mouse.y, 2.4, 0, Math.PI * 2)
         context.fill()

@@ -57,17 +57,17 @@ export function ServicesSection() {
       <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-2">
         {services.map((service, index) => (
           <Reveal key={service.number} className="h-full" delay={index * 80} rootMargin="0px 0px 15% 0px" threshold={0}>
-            <article className="group relative h-full overflow-hidden rounded-3xl border border-white/10 bg-black p-10 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/20 hover:bg-neutral-900/90 focus-within:border-white/20 focus-within:bg-neutral-900/90">
+            <article className="group relative h-full overflow-hidden rounded-3xl border border-border bg-card p-10 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-foreground/20 hover:bg-secondary focus-within:border-foreground/20 focus-within:bg-secondary">
               <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(255,255,255,0.10),transparent_34%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(0,0,0,0.06),transparent_34%)]" />
               </div>
 
               <div className="relative z-10">
-                <span className="font-mono text-xs tracking-[0.35em] text-white/30">{service.number}</span>
-                <h3 className="mt-6 text-balance font-mono text-xl uppercase tracking-[0.18em] text-white">
+                <span className="font-mono text-xs tracking-[0.35em] text-foreground/30">{service.number}</span>
+                <h3 className="mt-6 text-balance font-mono text-xl uppercase tracking-[0.18em] text-foreground">
                   {service.title}
                 </h3>
-                <p className="mt-4 text-pretty text-sm leading-relaxed text-white/50">{service.description}</p>
+                <p className="mt-4 text-pretty text-sm leading-relaxed text-foreground/50">{service.description}</p>
               </div>
             </article>
           </Reveal>
