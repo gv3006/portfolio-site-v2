@@ -123,6 +123,38 @@
     @apply bg-background text-foreground;
   }
 
+  .grain-background {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .grain-background::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.18) 0 1px, transparent 1px),
+      radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.12) 0 1px, transparent 1px);
+    background-size: 7px 7px, 11px 11px;
+    opacity: 0.5;
+  }
+
+  .network-background {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+  }
+
+  .grain-content {
+    position: relative;
+    z-index: 2;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -131,5 +163,34 @@
     will-change: opacity;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+  }
+
+  .works-gallery-track {
+    animation: works-gallery-scroll 45s linear infinite;
+  }
+
+  .works-gallery-set {
+    width: max(calc(100vw - 3rem), 980px);
+  }
+
+  .works-gallery-marquee:hover .works-gallery-track,
+  .works-gallery-marquee:focus-within .works-gallery-track {
+    animation-play-state: paused;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .works-gallery-track {
+      animation: none;
+    }
+  }
+}
+
+@keyframes works-gallery-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
   }
 }

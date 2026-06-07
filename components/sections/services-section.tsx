@@ -56,8 +56,8 @@ export function ServicesSection() {
       </Reveal>
       <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10 rounded-3xl overflow-hidden">
         {services.map((service, index) => (
-          <Reveal key={service.number} delay={index * 80}>
-            <div className="h-full bg-black p-10">
+          <Reveal key={service.number} className="h-full" delay={index * 80} rootMargin="0px 0px 15% 0px" threshold={0}>
+            <div className="h-full bg-black p-10 transition-colors duration-300 ease-out hover:bg-neutral-900 focus-within:bg-neutral-900">
               <span className="font-mono text-xs tracking-[0.35em] text-white/30">{service.number}</span>
               <h3 className="mt-6 font-mono text-xl tracking-[0.2em] uppercase">{service.title}</h3>
               <p className="mt-4 text-sm leading-relaxed text-white/50 text-pretty">{service.description}</p>

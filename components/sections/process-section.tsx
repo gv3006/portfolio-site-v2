@@ -4,14 +4,14 @@ import { Reveal } from "@/components/reveal"
 const steps = [
   {
     number: "01",
-    title: "Choose a style",
-    description: "Pick from several physician-focused website directions.",
+    title: "Build your vision",
+    description: "Pick from several physician-focused website directions or request a completely custom desing.",
     label: "Direction",
   },
   {
     number: "02",
     title: "Send your practice details",
-    description: "Services, photos, contact info, preferred tone.",
+    description: "Services, photos, contact info, preferred tone. The more you share, the more we can tailor your site to your specific practice.",
     label: "Content",
   },
   {
@@ -20,8 +20,14 @@ const steps = [
     description: "See a polished preview and request changes.",
     label: "Preview",
   },
-  {
+   {
     number: "04",
+    title: "Refine",
+    description: "Reiterate rounds of edits on the design and content until your site is exactly how you want it.",
+    label: "Edit",
+  },
+  {
+    number: "05",
     title: "Launch",
     description: "Go live with a professional site built for patient trust.",
     label: "Live",

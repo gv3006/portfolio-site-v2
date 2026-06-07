@@ -48,23 +48,33 @@ const projects = [
 ]
 
 export function WorksGallery() {
-  const [hoveredId, setHoveredId] = useState<number | null>(null)
-  const hasHoveredProject = hoveredId !== null
+  const [hoveredKey, setHoveredKey] = useState<string | null>(null)
+  const hasHoveredProject = hoveredKey !== null
 
   return (
     <>
       <CustomCursor isActive={hasHoveredProject} />
-      <div className="container mx-auto px-6">
-        <div className="flex gap-4 items-stretch">
-          {projects.map((project) => (
-            <VideoCard
-              key={project.id}
-              project={project}
-              isHovered={hoveredId === project.id}
-              isDimmed={hasHoveredProject && hoveredId !== project.id}
-              onHoverChange={(hovered) => setHoveredId(hovered ? project.id : null)}
-            />
-          ))}
+      <div className="w-full overflow-hidden px-6">
+        <div className="works-gallery-marquee overflow-hidden">
+          <div className="works-gallery-track flex w-max items-stretch">
+            {[0, 1].map((loopIndex) => (
+              <div key={loopIndex} className="works-gallery-set flex shrink-0 items-stretch gap-4 pr-4">
+                {projects.map((project) => {
+                  const projectKey = `${loopIndex}-${project.id}`
+
+                  return (
+                    <VideoCard
+                      key={projectKey}
+                      project={project}
+                      isHovered={hoveredKey === projectKey}
+                      isDimmed={hasHoveredProject && hoveredKey !== projectKey}
+                      onHoverChange={(hovered) => setHoveredKey(hovered ? projectKey : null)}
+                    />
+                  )
+                })}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

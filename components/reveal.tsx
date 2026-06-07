@@ -9,9 +9,17 @@ interface RevealProps {
   children: React.ReactNode
   className?: string
   delay?: number
+  rootMargin?: string
+  threshold?: number
 }
 
-export function Reveal({ children, className, delay = 0 }: RevealProps) {
+export function Reveal({
+  children,
+  className,
+  delay = 0,
+  rootMargin = "0px 0px -12% 0px",
+  threshold = 0.12,
+}: RevealProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   const [shouldReduceMotion, setShouldReduceMotion] = useState(false)
@@ -41,13 +49,13 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
           observer.unobserve(entry.target)
         }
       },
-      { rootMargin: "0px 0px -12% 0px", threshold: 0.12 },
+      { rootMargin, threshold },
     )
 
     observer.observe(element)
 
     return () => observer.disconnect()
-  }, [shouldReduceMotion])
+  }, [rootMargin, shouldReduceMotion, threshold])
 
   return (
     <div

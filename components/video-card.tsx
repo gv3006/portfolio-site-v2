@@ -40,24 +40,25 @@ export function VideoCard({ project, isHovered, isDimmed, onHoverChange }: Video
         "cursor-none",
         "transition-all duration-[800ms] ease-[cubic-bezier(0.4,0,0.2,1)]",
         "h-[600px] min-w-[180px]",
-        isHovered ? "flex-[2] shadow-2xl shadow-white/10" : "flex-[0.8] opacity-90",
+        isHovered ? "flex-[2] shadow-2xl shadow-white/10" : "flex-[0.8]",
       )}
       onMouseEnter={() => onHoverChange(true)}
       onMouseLeave={() => onHoverChange(false)}
     >
       {/* Thumbnail Image */}
-      <div
-        className={cn(
-          "absolute inset-0 transition-opacity duration-700",
-          isDimmed ? "opacity-50" : "opacity-100",
-        )}
-      >
+      <div className="absolute inset-0">
         <img
           src={project.thumbnail || "/placeholder.svg"}
           alt={project.title}
           className={cn(
-            "w-full h-full object-cover transition-all duration-700",
+            "w-full h-full object-cover object-top origin-top transition-all duration-700",
             !isHovered && "grayscale brightness-75",
+          )}
+        />
+        <div
+          className={cn(
+            "absolute inset-0 bg-black transition-opacity duration-700",
+            isDimmed ? "opacity-45" : "opacity-0",
           )}
         />
       </div>
@@ -66,7 +67,7 @@ export function VideoCard({ project, isHovered, isDimmed, onHoverChange }: Video
       <div className={cn("absolute inset-0 transition-opacity duration-700", isHovered ? "opacity-100" : "opacity-0")}>
         <video
           ref={videoRef}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-top origin-top"
           loop
           muted
           playsInline
