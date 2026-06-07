@@ -2,6 +2,7 @@ import { SiteHeader } from "@/components/site-header"
 import { WorksGallery } from "@/components/works-gallery"
 import { BackToTop } from "@/components/back-to-top"
 import { NetworkBackground } from "@/components/network-background"
+import { AboutSection } from "@/components/sections/about-section"
 import { WebsiteMattersSection } from "@/components/sections/website-matters-section"
 import { ProcessSection } from "@/components/sections/process-section"
 import { ServicesSection } from "@/components/sections/services-section"
@@ -28,6 +29,7 @@ export default function Page() {
         </main>
 
       {/* In-page sections */}
+        <AboutSection />
         <WebsiteMattersSection />
         <ProcessSection />
         <ServicesSection />

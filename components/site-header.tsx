@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
 
 const links = [
+  { id: "about", label: "ABOUT" },
   { id: "why-it-matters", label: "WHY IT MATTERS" },
   { id: "process", label: "PROCESS" },
   { id: "services", label: "SERVICES" },
